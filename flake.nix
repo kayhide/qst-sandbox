@@ -20,6 +20,7 @@
 
           lib-path = with pkgs; lib.makeLibraryPath [
             stdenv.cc.cc
+            zlib
           ];
 
           dev-env = pkgs.buildEnv {
