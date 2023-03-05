@@ -12,8 +12,11 @@
           pkgs = import inputs.nixpkgs { inherit system; overlays = [ overlay ]; };
 
           my-python = pkgs.python3.withPackages (p: with p; [
-            numpy
             matplotlib
+            numpy
+            scipy
+            black
+            qutip
           ]);
 
         in
